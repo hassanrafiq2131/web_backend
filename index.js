@@ -86,17 +86,9 @@ const app = express();
 
 
 
-
-// To handle HTTP POST requests in Express.js version 4 and above, 
-// you need to install the middleware module called body-parser.
-// body-parser extracts the entire body portion of an incoming request stream and exposes it on req.body.
-
-
-
-
 app.use(bodyParser.json({extended: true }));
 //app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({origin: 'https://webprojectsalary.onrender.com'}));
 
 app.use('/', Routes);
 
